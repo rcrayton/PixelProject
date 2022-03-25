@@ -12,21 +12,18 @@ grid.addEventListener("submit", function(event){
     event.preventDefault();
     makeGrid();
 });
+
 //Print the color in the grid when color is chosen
 pixelCanvas.addEventListener('click', function(event){
     event.target.style.backgroundColor = colorPicker.value;
 });
 
-
 function makeGrid() {
+    pixelCanvas.innerHTML = ''
    for (let i = 0; i < rowNumber.value; i++) {
        const row = pixelCanvas.insertRow(0);
        for (let j = 0; j < columnNumber.value; j++){
-           row.insertCell(0);       
+           row.insertCell(0);
         }
    }
-
-// Your code goes here!
-
-
 }
